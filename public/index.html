@@ -11,19 +11,48 @@
     <script type="text/javascript" src="bar.js"></script>
     <script type="text/javascript" src="csv.js"></script>
 
+    <style type="text/css">
+        /* 13. Basic Styling with CSS */
+        
+        /* Style the lines by removing the fill and applying a stroke */
+        .line {
+            fill: none;
+            stroke: #ffab00;
+            stroke-width: 3;
+        }
+          
+        .overlay {
+          fill: none;
+          pointer-events: all;
+        }
+        
+        /* Style the dots by assigning a fill and stroke */
+        .dot {
+            fill: #ffab00;
+            stroke: #fff;
+        }
+          
+          .focus circle {
+          fill: none;
+          stroke: steelblue;
+        }
+        
+        </style>
+
 </head>
 
 <body>
     <button id="read" value="Read">Read</button>
     <br>
     <svg id="svg"></svg>
+    <div id="plot"></div>
     <script type="text/javascript">
         d3.select("#read").on("click", function (d, i) {
             read_csv();
         })
 
-        //read_csv();
-        init();
+        read_csv();
+        //init();
     </script>
 </body>
 
